@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+
+:root {
+  --myfont: "Arial, Helvetica, sans-serif";
+  --my-btn-font: "Arial, Helvetica, sans-serif";
+  --lg-lightcolor: linear-gradient(
+    to left,
+    rgba(116, 235, 213, 0.6),
+    rgba(159, 172, 230, 0)
+  );
+  --lg-color: linear-gradient(to left, #74ebd5, #9face6);
+}
+
+body {
+  background-image: var(--lg-lightcolor),
+    url("https://images.pexels.com/photos/2828792/pexels-photo-2828792.jpeg?cs=srgb&dl=pexels-yender-fonseca-2828792.jpg&fm=jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  font-family: var(--myfont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  background-color: rgba(243, 221, 221, 0.986);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  box-shadow: 1px 2.8px 8.2px rgba(0, 0, 0.034),
+    3px 0.67px 0.3px rgba(0, 0, 0, 0.048);
+
+  overflow: hidden;
+  width: calc(100vw - 65vw);
+  max-width: 100%;
+}
+
+.header {
+  background: var(--lg-color);
+  padding: 30px 0;
+
+  box-shadow: 0 2px 8px rgba(45, 65, 52, 0.952),
+    0 0.67px 0.03px rgba(0, 0, 0, 0.038);
+}
+
+.header h2 {
+  color: #222;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.form {
+  padding: 40px;
+}
+
+.form-control {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.form-control label {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.form-control input {
+  width: 100%;
+  border: 2px solid #776565;
+  border-radius: 5px;
+  /* display: block; */
+  font-family: var(--myfont);
+  font-size: 14px;
+  padding: 5px;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border-color: rgb(3, 2, 2);
+}
+
+.form-control.success input {
+  border-color: rgb(50, 218, 50);
+}
+
+.form-control.error input {
+  border-color: rgb(233, 4, 4);
+}
+
+.form-control i {
+  position: absolute;
+  right: 18px;
+  top: 29px;
+  visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle {
+  color: rgb(50, 218, 50);
+  visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+  color: rgb(233, 4, 4);
+  visibility: visible;
+}
+
+.form-control small {
+  color: rgb(233, 4, 4);
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+  visibility: hidden;
+}
+
+.form-control.error small {
+  visibility: visible;
+  padding-top: 70px;
+}
+
+.form .btn {
+  background: var(--lg-color);
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  color: rgb(20, 17, 49);
+  display: block;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+
+  padding: 16px 0;
+  margin-top: 20px;
+  width: 100%;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 1s ease;
+
+  box-shadow: 0 2px 8px rgba(45, 65, 52, 0.952),
+    0 0.67px 0.03px rgba(0, 0, 0, 0.038);
+}
+
+.form .btn:hover {
+  background: linear-gradient(to right, #908fd6cb, #d6bce6);
+  cursor: pointer;
+}
+
+.swal-button {
+  background-color: rgb(80 32 38);
+}
+
+.swal-button:not([disabled]):hover {
+  background-color: rgba(90, 10, 110, 0.959);
+}
+
+.swal-title {
+  color: rgb(139 0 0 / 93%);
+  font-weight: 600;
+  font-size: 33px;
+}
+
+.swal-text {
+  font-weight: 700;
+  color: rgb(32 131 25);
+  font-size: 17px;
+}
+
+.swal-icon--success__line {
+  background-color: rgb(78 175 24);
+}
+
+@media (max-width: 998px) {
+  .container {
+    width: calc(100vw - 35vw);
+    max-width: 100%;
+  }
+}
