@@ -20,7 +20,7 @@
 body {
   background-image: var(--lg-lightcolor),
     url("https://images.pexels.com/photos/2828792/pexels-photo-2828792.jpeg?cs=srgb&dl=pexels-yender-fonseca-2828792.jpg&fm=jpg");
-  background-size: 100%;
+  background-size: 100vw 100vh;
   background-repeat: no-repeat;
   font-family: var(--myfont);
   display: flex;
